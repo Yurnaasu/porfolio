@@ -1,3 +1,104 @@
+:root {
+    --bg-deep: #3d313c;      /* Fond prune sombre */
+    --rose-light: #f3d5d9;   /* Rose clair */
+    --rose-medium: #e1b1b4;  /* Vieux rose */
+    --rose-vif: #d996b8;     /* Rose orchidée */
+    --mauve: #b283a7;        /* Mauve */
+}
+
 body {
-    background-color: skyblue;
+    background: radial-gradient(circle at top right, #7e667c, #3d313c, #1a1519); /* Dégradé profond */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- NAVBAR FUTURISTE --- */
+.navbar {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px); /* Effet flou Premium */
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar a {
+    color: var(--rose-light);
+    text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    transition: all 0.4s ease;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.navbar a:hover {
+    background: rgba(243, 213, 217, 0.1);
+    color: white;
+    letter-spacing: 5px; /* Animation d'espacement au survol */
+}
+
+/* --- TEXTE D'INTRODUCTION --- */
+.intro-container {
+    margin-top: 100px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 0;
+    background: linear-gradient(to bottom, var(--rose-light), var(--rose-vif));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+.intro-text {
+    font-size: 1rem;
+    color: var(--rose-medium);
+    text-transform: uppercase;
+    letter-spacing: 8px; /* Look très luxe */
+    margin: 40px 0;
+    display: block;
+    opacity: 0.7;
+}
+
+/* --- BOUTONS / BULLES --- */
+.bubble-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px;
+}
+
+.bubble {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 30px 50px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.bubble:hover {
+    background: linear-gradient(135deg, var(--rose-vif), var(--mauve));
+    transform: translateY(-15px) scale(1.05); /* Effet de lévitation */
+    box-shadow: 0 20px 40px rgba(217, 150, 184, 0.4);
+    border-color: var(--rose-light);
 }
