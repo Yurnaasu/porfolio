@@ -10,10 +10,9 @@
     
     {# Tes bulles de navigation à l'identique #}
     <div class="bubble-container">
-        <a href="#presentation" class="bubble">Présentation</a>
-        <a href="#cv" class="bubble">Mon parcours</a>
-        <a href="#competence" class="bubble">Expertise</a>
-        <a href="#plus" class="bubble">Contact</a>
-    </div>
+    <a href="{{ path('app_cv') }}" class="bubble">Mon parcours</a>
+    <a href="{{ path('app_competence') }}" class="bubble">Expertise</a>
+    <a href="{{ path('app_contact') }}" class="bubble">Contact</a>
+</div>
 </div>
 {% endblock %}

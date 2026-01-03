@@ -3,17 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Mon Portfolio{% endblock %}</title>
-       {% block stylesheets %}
-    {{ importmap('app') }}
-{% endblock %}
+        {% block stylesheets %}
+            {{ importmap('app') }}
+        {% endblock %}
     </head>
     <body>
         <nav class="navbar">
             <a href="{{ path('app_home') }}">Accueil</a>
-            <a href="#cv">CV</a>
-            <a href="#competence">Compétences</a>
-            <a href="#plus">Plus</a>
+            <a href="{{ path('app_cv') }}">CV</a>
+            <a href="{{ path('app_competence') }}">Compétences</a>
+            <a href="{{ path('app_contact') }}">Plus</a>
         </nav>
+
         {% block body %}{% endblock %}
     </body>
 </html>
